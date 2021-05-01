@@ -9,7 +9,6 @@
 
 # Java class files
 *.class
-*.kt
 
 # Generated files
 bin/
