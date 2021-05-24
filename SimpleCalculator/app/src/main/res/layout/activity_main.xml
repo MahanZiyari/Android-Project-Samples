@@ -15,6 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="expression"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/white"
         android:textColorHint="?attr/colorSecondary"
         app:boxStrokeColor="@color/blue_800"
         app:hintTextColor="@color/blue_800"
@@ -22,6 +24,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/expression_edittext"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:maxLength="20"
@@ -36,7 +39,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/outlinedTextField">
@@ -52,6 +55,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="1"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -65,6 +69,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="2"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -78,6 +83,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="3"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -98,6 +104,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="4"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -111,6 +118,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="5"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -124,6 +132,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="6"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -144,6 +153,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="7"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -157,6 +167,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="8"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -172,6 +183,7 @@
                 android:shadowDx="5"
                 android:shadowDy="6"
                 android:text="9"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -192,6 +204,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="0"
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -205,6 +218,7 @@
                 android:layout_height="@dimen/number_button_height"
                 android:layout_weight="1"
                 android:text="."
+                android:onClick="numberButtonOnclick"
                 android:textSize="@dimen/button_text_size" />
 
             <Space
@@ -219,6 +233,7 @@
                 android:layout_weight="1"
                 android:shadowDx="5"
                 android:shadowDy="6"
+                android:onClick="equalButtonOnClick"
                 android:text="="
                 android:textSize="@dimen/button_text_size" />
 
@@ -234,7 +249,7 @@
     <LinearLayout
         android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/outlinedTextField">
@@ -247,6 +262,7 @@
             app:icon="@drawable/ic_backspace_black_24dp"
             app:iconGravity="textEnd"
             app:iconSize="30dp"
+            android:onClick="backSpaceOnClick"
             app:iconTint="@color/blue_800" />
 
         <Button
@@ -257,6 +273,7 @@
             app:icon="@drawable/ic_divide"
             app:iconGravity="textEnd"
             app:iconSize="20dp"
+            android:onClick="operatorButtonOnClick"
             app:iconTint="@color/blue_800" />
 
         <Button
@@ -264,6 +281,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/operator_button_height"
             android:text="X"
+            android:onClick="operatorButtonOnClick"
             android:textColor="@color/blue_800"
             android:textSize="20sp" />
 
@@ -272,6 +290,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/operator_button_height"
             android:text="-"
+            android:onClick="operatorButtonOnClick"
             android:textColor="@color/blue_800"
             android:textSize="45sp" />
 
@@ -280,6 +299,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/operator_button_height"
             android:text="+"
+            android:onClick="operatorButtonOnClick"
             android:textColor="@color/blue_800"
             android:textSize="30sp" />
 
