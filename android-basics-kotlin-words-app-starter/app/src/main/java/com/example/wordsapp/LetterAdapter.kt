@@ -15,6 +15,7 @@
  */
 package com.example.wordsapp
 
+import android.content.Intent
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -27,8 +28,7 @@ import androidx.recyclerview.widget.RecyclerView
 /**
  * Adapter for the [RecyclerView] in [MainActivity].
  */
-class LetterAdapter :
-    RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
+class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
 
     // Generates a [CharRange] from 'A' to 'Z' and converts it to a list
     private val list = ('A').rangeTo('Z').toList()
@@ -62,6 +62,13 @@ class LetterAdapter :
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
         val item = list.get(position)
         holder.button.text = item.toString()
+
+        holder.button.setOnClickListener {
+            val context = holder.view.context
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
+            context.startActivity(intent)
+        }
     }
 
     // Setup custom accessibility delegate to set the text read with
