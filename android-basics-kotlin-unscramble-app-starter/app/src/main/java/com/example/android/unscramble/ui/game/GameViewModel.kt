@@ -23,11 +23,7 @@ class GameViewModel : ViewModel() {
         Log.d("GameFragment", "GameViewModel created!")
         getNextWord()
     }
-
-    override fun onCleared() {
-        super.onCleared()
-        Log.d("GameFragment", "GameViewModel destroyed!")
-    }
+    
 
     fun reinitializeData() {
         _score.value = 0
@@ -36,7 +32,7 @@ class GameViewModel : ViewModel() {
         getNextWord()
     }
 
-    fun getNextWord(): Unit {
+    fun getNextWord() {
         currentWord = allWordsList.random()
         val tempWord = currentWord.toCharArray()
         tempWord.shuffle()
