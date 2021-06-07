@@ -23,7 +23,7 @@ class GameViewModel : ViewModel() {
         Log.d("GameFragment", "GameViewModel created!")
         getNextWord()
     }
-    
+
 
     fun reinitializeData() {
         _score.value = 0
