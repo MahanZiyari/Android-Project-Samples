@@ -53,7 +53,7 @@ class PickupFragment : Fragment() {
         binding?.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            pickUpFragment = this@PickupFragment
+            pickupFragment = this@PickupFragment
         }
     }
 
