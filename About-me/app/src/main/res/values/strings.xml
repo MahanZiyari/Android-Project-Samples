@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">About Me</string>
+    <string name="name">Mahan Ziyari</string>
+    <string name="yellow_start">Yellow Start</string>
+    <string name="description">Hi my name is mahan.
+    \n\nI love video games and reading books.
+    \nI am also interested in android native development and making games.
+    \nI finished The witcher3, Batman trilogy, The last of us(part 1), DMC and etc.
+    \n\nAt this time i\'m 21 and already know this concepts:
+    \nBasics of programming like Flowchart, algorithms, DS, Basic knowledge of Os and practical skills like:
+    \nJava Core, Junior Programmer in Unity and Be familiar with Android Basics.
+    \nAnd when it\'s come to Android i also have to mention that i know the basics of Kotlin very well and wrote many easy-hard
+    programs with it that you can find them in my GitHub account.
+    \n\nBeside them i Read these books about Kotlin to extend my knowledge of it:
+    \n\"Head First Kotlin\" and \"Kotlin Programming by Big Nerd Ranch Company\".
+    \nI hope i introduce my self very well and not boring you my friend. see ya.\n</string>
+    <string name="what_is_your_nickname">What is your Nicknamne?</string>
+    <string name="done">Done</string>
 </resources>
