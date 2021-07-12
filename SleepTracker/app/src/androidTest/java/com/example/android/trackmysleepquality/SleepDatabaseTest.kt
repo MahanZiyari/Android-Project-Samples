@@ -70,7 +70,7 @@ class SleepDatabaseTest {
 
     @Test
     @Throws (Exception::class)
-    fun ClearTable(){
+    fun clearTable(){
         sleepDao.clear()
         val sizeOfTable = sleepDao.getAllNight().value?.size
         assertEquals(null, sizeOfTable)
