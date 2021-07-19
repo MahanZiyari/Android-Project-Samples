@@ -23,7 +23,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.example.android.trackmysleepquality.database.SleepDatabaseDao
 import com.example.android.trackmysleepquality.database.SleepNight
-import com.example.android.trackmysleepquality.formatNights
 import kotlinx.coroutines.*
 
 /**
@@ -41,10 +40,10 @@ class SleepTrackerViewModel(val database: SleepDatabaseDao,  application: Applic
 
         private var tonight = MutableLiveData<SleepNight?>()
 
-        private val nights = database.getAllNights()
-        val nightsString = Transformations.map(nights) { nights ->
-                formatNights(nights, application.resources)
-        }
+        internal val nights = database.getAllNights()
+//        val nightsString = Transformations.map(nights) { nights ->
+//                formatNights(nights, application.resources)
+//        }
 
         private val _navigateToSleepQuality = MutableLiveData<SleepNight>()
 
